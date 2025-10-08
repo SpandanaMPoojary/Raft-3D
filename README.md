@@ -12,11 +12,17 @@ Leader Election and Data Persistence during node failure.
 **End Points Supported:**
 
 1. POST printer
+   
 2.GET printer
+
 3.POST filament
+
 4.GET fialment
+
 5.POST Print Job
+
 6.GET Print Jobs
+
 7.Update Print Job Status
 
 -------------------------------------------
