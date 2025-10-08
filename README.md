@@ -1,22 +1,26 @@
 
 Steps to run the project:
 
-1.	**TERMINAL 1: **
-2.	Start Node1 alone: Run it without --join:
-3.	go run main.go --node-id=node1 --raft-port=12000 --http-port=8080
-4.**	TERMINAL 2:**
-5.	Then start Node2 with --join:
-6.	go run main.go --node-id=node2 --raft-port=12001 --http-port=8081 --join=localhost:8080
-7.	**TERMINAL 3**
-8.	Then start Node3 similarly.
-9.	go run main.go --node-id=node3 --raft-port=12002 --http-port=8082 --join=localhost:8080
-10.**	TERMINAL 4:**
-11.	curl http://localhost:8080/health
-12.	You should now see:
-13.	{"status":"ok","leader":"127.0.0.1:12000", ...}
-14.	Then test with:
-15.	curl http://localhost:8081/health
-16.	curl http://localhost:8082/health
+✅ 1. Starting the nodes
+**TERMINAL 1:**
+1.	Start Node1 alone: Run it without --join:
+	go run main.go --node-id=node1 --raft-port=12000 --http-port=8080
+   
+ **TERMINAL 2:**
+2.	Then start Node2 with --join:
+    go run main.go --node-id=node2 --raft-port=12001 --http-port=8081 --join=localhost:8080
+
+**TERMINAL 3**
+3.	Then start Node3 similarly.
+	go run main.go --node-id=node3 --raft-port=12002 --http-port=8082 --join=localhost:8080
+    
+ **TERMINAL 4:**
+4.	curl http://localhost:8080/health
+	You should now see:
+	{"status":"ok","leader":"127.0.0.1:12000", ...}
+5.	Then test with:
+	curl http://localhost:8081/health
+	curl http://localhost:8082/health
     
 ✅ 2. Add Printer (only on leader)
 $headers = @{ "Content-Type" = "application/json" }
