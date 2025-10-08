@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raft Store API Test</title>
+</head>
+<body>
+  <h1>Raft Store API Test</h1>
+  <button id="postRequestBtn">Send POST Request</button>
+
+  <script>
+    document.getElementById('postRequestBtn').addEventListener('click', function() {
+      fetch('http://localhost:8080/kv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          key: 'foo',
+          value: 'bar'
+        }),
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error));
+    });
+  </script>
+</body>
+</html>

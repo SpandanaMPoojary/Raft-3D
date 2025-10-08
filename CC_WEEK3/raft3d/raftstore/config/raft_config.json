@@ -1,0 +1,8 @@
+{
+    "raft": {
+      "election_timeout": "1s",
+      "heartbeat_timeout": "500ms",
+      "snapshot_threshold": 1000,
+      "snapshot_interval": "30s"
+    }
+  }
