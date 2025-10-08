@@ -11,6 +11,7 @@ Leader Election and Data Persistence during node failure.
 -------------------------------------------------------------------------------------
 **End Points Supported:**
 
+
 1. POST printer
    
 2.GET printer
