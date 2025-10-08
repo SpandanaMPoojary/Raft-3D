@@ -1,4 +1,25 @@
+Data consistency across the Raft3D network is maintained through the Raft
+Consensus mechanism.
 
+Demonstration requires a minimum of three operational nodes (implementable as
+separate terminals or containers).
+
+Project demonstration effectively showcases core Raft functionality including
+Leader Election and Data Persistence during node failure.
+
+
+-------------------------------------------------------------------------------------
+**End Points Supported:**
+
+1. POST printer
+2.GET printer
+3.POST filament
+4.GET fialment
+5.POST Print Job
+6.GET Print Jobs
+7.Update Print Job Status
+
+-------------------------------------------
 Steps to run the project:
 
 ✅ 1. Starting the nodes
